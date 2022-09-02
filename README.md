@@ -1,2 +1,2 @@
-# Movies & Series info. Full Stack Web App
+# Movies & Series info. Full Stack Web Application
 
