@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Dancing+Script:wght@400;500;700&family=Dosis:wght@200;400&family=Island+Moments&family=Josefin+Sans:wght@100&family=Neonderthaw&family=Playfair+Display&family=Quicksand:wght@300&family=Raleway:wght@100&family=The+Nautigal&family=Zen+Kurenaido&display=swap');
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

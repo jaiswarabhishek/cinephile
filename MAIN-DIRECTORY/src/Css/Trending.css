@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.inner-trending-container{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+   
+   width: 90%;
+   gap: 1.2em;
+   margin: 0 auto;
+}
+
+.trending-container{
+    margin-top: 4em;
+}
+
+.trending-today{
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+    letter-spacing: 0.2;
+    margin-bottom: 1em;
+}
