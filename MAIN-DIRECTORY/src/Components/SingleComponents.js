@@ -1,6 +1,7 @@
 import React from 'react'
 import '../Css/SingleComponents.css'
 import {img_300,unavailable} from './Config';
+import Badge from '@mui/material/Badge';
 
 function SingleComponents({ 
            id,
@@ -15,6 +16,9 @@ function SingleComponents({
            original_name}) {
   return (
     <div className='trending-components-container'>
+        <div className="badge">
+      <Badge badgeContent={vote_average? vote_average:vote_count} color={vote_average>7 ?"primary" : "secondary"} />
+        </div>
       <img className='trending-img' src={poster_path?`${img_300}${poster_path}`:unavailable} alt="" />
       <h3 className="trending-title">{title ? title:name}</h3>
       <div className="trending-details">
