@@ -10,6 +10,7 @@ const baseurl ="https://image.tmdb.org/t/p/original/"
 
 function Trending() {
   const [page,setPage] = useState(1);
+  const [tot_page,setTotalPage] = useState(100);
   const [trending,setTrending] = useState([]);
   const str =`&page=${page}`;
   useEffect(()=>{
@@ -48,7 +49,7 @@ function Trending() {
         })
       }
       </div>
-      <CustomPagination setPage={setPage} />
+      <CustomPagination setPage={setPage} tot_page={tot_page} />
     </div>
     </>
   )

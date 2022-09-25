@@ -2,7 +2,6 @@ import React from 'react'
 import '../Css/error.css';
 import { useNavigate} from 'react-router-dom';
 
-
  const error_img =
   "https://www.hotstar.com/assets/e888f274671ec4c5a93e1776c3f6137e.png";
 

@@ -10,7 +10,7 @@ const darkTheme = createTheme({
   },
 });
 
-function CustomPagination({setPage}) {
+function CustomPagination({setPage,tot_page}) {
  
     const handleChange=(page)=>{
        setPage(page);
@@ -20,7 +20,7 @@ function CustomPagination({setPage}) {
   return (<>
    <div className="pagination">
     <ThemeProvider theme={darkTheme}>
-     <Pagination  onChange={(e)=>handleChange(e.target.textContent)} hidePrevButton hideNextButton count={100} color="primary"  />
+     <Pagination  onChange={(e)=>handleChange(e.target.textContent)} hidePrevButton hideNextButton count={tot_page} color="primary"  />
      </ThemeProvider>
    </div>
 </>

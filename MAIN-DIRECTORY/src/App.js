@@ -3,7 +3,7 @@ import Header from './Components/Header';
 import Error from './Pages/Error';
 import Search from './Pages/Search';
 import Trending from './Pages/Trending';
-import Genres from './Pages/Genres';
+import Movies from './Pages/Movies';
 import Series from './Pages/Series';
 import SignUp from './Pages/SignUp';
 import { useState } from 'react';
@@ -20,7 +20,7 @@ function App() {
     <div className="App">
   <Routes>
     <Route exact path="/" element={<Trending />} />
-    <Route path="/genres" element={<Genres />} />
+    <Route path="/movies" element={<Movies />} />
     <Route path="/series" element={<Series />} />
     <Route path="/search" element={<Search />} />
     <Route path="*"       element={<Error />} />
