@@ -6,6 +6,8 @@ import Trending from './Pages/Trending';
 import Movies from './Pages/Movies';
 import Series from './Pages/Series';
 import SignUp from './Pages/SignUp';
+import SignIn from './Pages/SignIn';
+
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //Use Routes instead of Switch
@@ -25,6 +27,7 @@ function App() {
     <Route path="/search" element={<Search />} />
     <Route path="*"       element={<Error />} />
     <Route path="/sign-up" element={<SignUp />} />
+    <Route path="/sign-in" element={<SignIn />} />
  </Routes>
 
     </div>

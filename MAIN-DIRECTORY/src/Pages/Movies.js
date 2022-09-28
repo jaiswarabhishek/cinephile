@@ -7,8 +7,6 @@ import CustomPagination from './Pagination'
 import useGenre from '../Hooks/useGenre'
 import { useEffect } from 'react'
 
-
-
 function Movies() {
   const[page,setPage]= useState(1);
   const[name,setName]=useState("Movies");

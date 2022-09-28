@@ -22,8 +22,6 @@ function Search() {
  const [tot_page,setTotalPage] = useState();
  const [searchText,setsearchText] =useState("");
  const [name,setName] = useState("Movies");
-
-
  
   const fetchContent = async()=>{
     const {data} = await axios.get(`https://api.themoviedb.org/3/search/${value ? "tv" : "movie"}?api_key=${process.env.REACT_APP_API_KEY}&query=${searchText}&language=en-US&page=${page}&include_adult=false`);
@@ -46,7 +44,6 @@ function Search() {
     setValue(newValue);
     setPage(1);
   };
-
 
   return (
     <div >

@@ -8,15 +8,21 @@ import LiveTvIcon from '@mui/icons-material/LiveTv';
 import Search from '@mui/icons-material/Search';
 import {Link,useNavigate} from 'react-router-dom'
 import { useState } from 'react';
+import Avatar from '@mui/material/Avatar';
 import BottomNavigation from '@mui/material/BottomNavigation';
 
 
 function Header() {
 const navigate = useNavigate();
+const [Login , setLogin] =useState('A');
 
 
 const setLocation =()=>{
   navigate('/');
+}
+
+const SignUp =()=>{
+  navigate('/sign-up');
 }
 
 
@@ -32,7 +38,8 @@ const setLocation =()=>{
  <BottomNavigationAction href='/search' showLabel style={{color:"white"}} label="Search" icon={<Search />} />
 
     </div>
-   <button className='create-account-btn' >Sign in</button>
+   <button className='create-account-btn'  onClick={SignUp} >Sign up</button>
+   
     </div>
     </>
   
