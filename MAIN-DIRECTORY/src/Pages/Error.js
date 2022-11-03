@@ -17,7 +17,7 @@ function Error() {
     <img className='error-img' src={error_img} alt="" />
     <h1 className='err'>404</h1>
     <h3 className='err-msg' >Oops! Page Not Found</h3>
-     <button onClick={setLocation}  className='err-btn'>Go Back Home </button>
+     <button onClick={setLocation}  className='err-btn'> Back to Home </button>
    </div>
   )
 }

@@ -3,6 +3,7 @@ import './Banner.css'
 import axios from './Components/axios';
 import { useState,useEffect } from 'react';
 import requests from './Components/request';
+
 const baseurl ="https://image.tmdb.org/t/p/original/"
 
 function Banner() {
@@ -11,7 +12,7 @@ function Banner() {
     // const pagenumber=`&page=${number}`;
     useEffect(()=>{
         async function fetchMovie(){
-            const request = await axios.get(requests.fetchTrending);
+            const request = await axios.get(requests.fetchActionMovies);
             setMovie(request.data.results[Math.floor(Math.random() *request.data.results.length )]);
             return request;
         }

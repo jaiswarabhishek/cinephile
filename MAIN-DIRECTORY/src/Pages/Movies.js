@@ -11,12 +11,11 @@ function Movies() {
   const[page,setPage]= useState(1);
   const[name,setName]=useState("Movies");
   const [tot_page,setTotalPage]=useState(1);
-  const [trending,setTrending] = useState([]);
+  const [trending,setTrending] = useState();
   const [genres,setGenres] = useState([]);
   const [selectedGenres,setSelectedGenres] = useState([]);
   const genresString = useGenre(selectedGenres);
   
-
   useEffect(()=>{
 
  const fetchMovies = async()=>{

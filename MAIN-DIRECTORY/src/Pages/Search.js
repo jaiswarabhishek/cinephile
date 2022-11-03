@@ -34,6 +34,7 @@ function Search() {
     fetchContent();
     if(searchText===""){
     setContent([]);
+    
     setTotalPage(1);
     }
 
@@ -59,6 +60,7 @@ function Search() {
       <Tab label="Movies" style={{width:'45%'}}  />
       <Tab  label="TV Series" style={{width:'45%'}} />
     </Tabs>
+    
     </div>
     </ThemeProvider>
      <div className="inner-trending-container">

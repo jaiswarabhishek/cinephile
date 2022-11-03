@@ -10,12 +10,13 @@ import {Link,useNavigate} from 'react-router-dom'
 import { useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import BottomNavigation from '@mui/material/BottomNavigation';
-
+import UserAvatar from '../Pages/UserAvatar'
+import { useAuth } from '../Context/context';
 
 function Header() {
 const navigate = useNavigate();
 const [Login , setLogin] =useState('A');
-
+const {currentUser} = useAuth();
 
 const setLocation =()=>{
   navigate('/');
@@ -38,7 +39,8 @@ const SignUp =()=>{
  <BottomNavigationAction href='/search' showLabel style={{color:"white"}} label="Search" icon={<Search />} />
 
     </div>
-   <button className='create-account-btn'  onClick={SignUp} >Sign up</button>
+  {currentUser? <UserAvatar/> :<button className='create-account-btn'  onClick={SignUp} >Sign up</button>}
+ 
    
     </div>
     </>

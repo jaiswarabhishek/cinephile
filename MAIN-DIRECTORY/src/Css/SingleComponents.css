@@ -36,11 +36,12 @@
     font-weight: 300;
 }
 .badge{
+    
    display: flex;
    justify-content: flex-end;
     position: relative;
     top: -1em;
-    left: 0.4em;
+    left: 0.7em;
 }
 .trending-details{
    margin-top: 1em;
