@@ -103,9 +103,7 @@ const navigate = useNavigate();
         <MenuItem>
          <Avatar sx={ {bgcolor:'#1f80e0'}} /> {currentUser.email}
         </MenuItem>
-        <MenuItem>
-          <Avatar sx={ {bgcolor:'#1f80e0'}} /> Update Profile
-        </MenuItem>
+       
         <Divider />
         
         <MenuItem>

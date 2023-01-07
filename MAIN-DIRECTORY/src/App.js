@@ -24,16 +24,15 @@ const {currentUser} = useAuth();
     <Header />
     <div className="container">
     <div className="App">
+      
   <Routes>
-  
-
    
-    <Route exact path='/' element={<Trending />}/>
+    <Route exact path='/' element={<Trending /> }/>
     <Route path="/movies" element={<Movies />} />
     <Route path="/series" element={<Series />} />
     <Route path="/search" element={<Search />} />
     <Route path="*"       element={<Error />} />
-   <Route path="/sign-up" element={<SignUp />} />
+    <Route path="/sign-up" element={<SignUp />} />
     <Route path="/sign-in" element={<SignIn />} />
  </Routes>
 

@@ -23,13 +23,15 @@ function Movies() {
   
   setTrending(data.results);
   setTotalPage(data.total_pages);
-  console.log(data);
+
 
   }
 
   fetchMovies();
   // eslint-disable-next-line
 },[page,genresString])
+
+
 
   return (<>
     <div className="geners-container">
@@ -40,13 +42,14 @@ function Movies() {
       {
         trending && trending.map((trends)=>{
           const {id,poster_path,title,release_date,media_type,vote_average,vote_count,name,first_air_date,original_name} =trends;
+          
           return <SingleComponents
            key={id}
            id={id}
            poster_path={poster_path} 
            title={title} 
            release_date={release_date} 
-           media_type={media_type}
+           media_type="movie"
            vote_average={vote_average}
            vote_count={vote_count}
            name={name}

@@ -36,7 +36,7 @@ const navigate = useNavigate();
    catch(error){
    
    setError(error.message);
-   
+   alert(error.message);
    }
 
    setLoading(false);
@@ -61,38 +61,17 @@ const navigate = useNavigate();
 
   
 
-
-
-
-          { error? <TextField style={{margin:'1em'}}
-            required
-           error
-          id="outlined-password-input"
-          label="Password"
-          type="password"
-          helperText="Incorrect Password"
-          onChange={(e)=>setpasswordRef(e.target.value)}
-          autoComplete="current-password"
-        />
-        
-        :
         <TextField style={{margin:'1em'}}
             required
             
           id="outlined-password-input"
           label="Password"
           type="password"
-         
           onChange={(e)=>setpasswordRef(e.target.value)}
           autoComplete="current-password"
         />
 
-  }
-
-
-         
-
-         <Link to='/' style={{color:'#1f80e0',marginLeft:'1em',textDecoration:'none'}}>Forgot Password ?</Link>
+  
         </ThemeProvider>
 
          <Button className='sign-up-btn'  style={{color:'#fff' , margin: '1em',padding: '0.7em'}}   type='submit'>Sign In</Button>

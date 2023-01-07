@@ -16,7 +16,8 @@ function Trending() {
   useEffect(()=>{
     async function fetchTrending (){
       const request = await axios.get(requests.fetchTrending+str);
-      console.log(request.data.results);
+
+   
       setTrending(request.data.results);
       return request;
     }

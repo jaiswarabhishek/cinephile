@@ -26,13 +26,16 @@ function SignUp() {
   const [loading ,setLoading] = useState(false);
   const navigate = useNavigate();
 
+ 
+ 
   
   async function handleSubmit(e){
   e.preventDefault();
+
   
   
   if(passwordRef!== confirmPasswordRef){
-   return setError("Passwor do not match");
+   return setError("Password do not match");
   }
 
 
@@ -42,8 +45,8 @@ function SignUp() {
     await signUp(emailRef,passwordRef);
     navigate('/');
    }
-   catch(error){
-   alert(error.message);
+   catch(er){
+   alert(er.message);
    }
 
    setLoading(false);
@@ -63,8 +66,8 @@ function SignUp() {
           <TextField  required style={{margin:'1em'}}
            type="text"
            id="outlined-basic"
-           name='name' 
-            
+           name='name'  
+           inputProps={{ maxLength: 30 }}
            onChange={(e)=>setnameRef(e.target.value)} 
            label="Name" 
            variant="outlined" />
@@ -137,3 +140,4 @@ function SignUp() {
 }
 
 export default SignUp
+

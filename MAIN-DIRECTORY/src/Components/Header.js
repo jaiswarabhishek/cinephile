@@ -39,7 +39,7 @@ const SignUp =()=>{
  <BottomNavigationAction href='/search' showLabel style={{color:"white"}} label="Search" icon={<Search />} />
 
     </div>
-  {currentUser? <UserAvatar/> :<button className='create-account-btn'  onClick={SignUp} >Sign up</button>}
+  {currentUser?<UserAvatar/> :<button className='create-account-btn'  onClick={SignUp} >Sign up</button>}
  
    
     </div>

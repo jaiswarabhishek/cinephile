@@ -3,14 +3,14 @@ import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
-import Button from '@mui/material/Button';
+
 import Typography from '@mui/material/Typography';
 import { useState,useEffect } from 'react';
 import { img_300,unavailable } from '../Components/Config';
 import './Modal.css';
 import Carousel from '../Components/Carousel';
 import axios from 'axios';
-import ReactPlayer from 'react-player';
+
 import MovieTrailerModal from './MovieTrailerModal';
 
 
@@ -53,8 +53,8 @@ export default function ModalContent({children,media_type,id}) {
     
    setVideo(data.results[0]?.key);
    
-  
   }
+  
 
   useEffect(()=>{
      fetchData();
