@@ -6,27 +6,47 @@ import requests from '../Components/request';
 import CustomPagination from './Pagination';
 import Banner from '../Banner';
 import SingleComponents from '../Components/SingleComponents';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 
 function Trending() {
   const [page,setPage] = useState(1);
+   const [loading, setLoading] = useState(false);
   const [tot_page,setTotalPage] = useState(100);
   const [trending,setTrending] = useState([]);
   const str =`&page=${page}`;
-  useEffect(()=>{
-    async function fetchTrending (){
-      const request = await axios.get(requests.fetchTrending+str);
 
-   
+  useEffect(()=>{
+    async function fetchTrending(){
+      setLoading(true);
+      const request = await axios.get(requests.fetchTrending+str);
       setTrending(request.data.results);
+      setTotalPage(request.data.total_pages);
+      setLoading(false);
       return request;
     }
     fetchTrending();
-   
   },[page])
 
+
+
+
+
+
+
+
   return (<>
+  {
+    loading && 
+      <Box sx={{ display: 'flex' , justifyContent:'center',marginTop:'2em' }}>
+      <CircularProgress />
+    </Box>
+  }
+
+ {!loading && <div>
     <Banner />
+   
 
     <div className="trending-container">
       <h3 className='trending-today'>Latest & Trending</h3>
@@ -52,6 +72,8 @@ function Trending() {
       </div>
       <CustomPagination setPage={setPage} tot_page={tot_page} />
     </div>
+    </div>
+}
     </>
   )
 }

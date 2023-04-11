@@ -8,8 +8,7 @@ const baseurl ="https://image.tmdb.org/t/p/original/"
 
 function Banner() {
     const [movie,setMovie] = useState([]);
-    // const number=Math.random() * 100;
-    // const pagenumber=`&page=${number}`;
+    
     useEffect(()=>{
         async function fetchMovie(){
             const request = await axios.get(requests.fetchActionMovies);

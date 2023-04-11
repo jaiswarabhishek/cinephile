@@ -34,6 +34,7 @@ function Movies() {
 
 
   return (<>
+  
     <div className="geners-container">
      <h2 className="geners-title" style={{marginBottom:'1em'}}>Genres</h2>
      <Genres type="movie" selectedGenres={selectedGenres} setPage={setPage} setName={setName} setSelectedGenres={setSelectedGenres} genres={genres} setGenres={setGenres}/>
